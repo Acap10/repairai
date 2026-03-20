@@ -1,1 +1,9 @@
-
+services:
+  - type: web
+    name: repairai
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python reputation_repair_app.py
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
